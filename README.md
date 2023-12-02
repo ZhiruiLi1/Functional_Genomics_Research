@@ -22,10 +22,12 @@ To utilize the app effectively, please ensure the following:
 7. The sample dataset has three columns named "Treatment", "Condition", and "DaysPostInfection".
 
 Here is an example of the count dataset:
-<img width="966" alt="Screenshot 2023-09-13 at 2 57 36 AM" src="https://github.com/compbiocore/Shiny_App_Zhirui/assets/90368869/5ed3d30d-0c18-4b0b-afc0-e8f11373057f">
+<img width="966" alt="267563704-5ed3d30d-0c18-4b0b-afc0-e8f11373057f" src="https://github.com/ZhiruiLi1/Limma_Voom_Shiny_CCV/assets/90368869/93016b3a-f3b4-4958-b332-34efc114385e">
+
 
 Here is an example of the sample dataset:
-<img width="956" alt="Screenshot 2023-09-13 at 2 57 47 AM" src="https://github.com/compbiocore/Shiny_App_Zhirui/assets/90368869/fa83fdec-d43a-4d39-9d52-f0b15a1c1eae">
+<img width="956" alt="267563846-fa83fdec-d43a-4d39-9d52-f0b15a1c1eae" src="https://github.com/ZhiruiLi1/Limma_Voom_Shiny_CCV/assets/90368869/e3d92f84-12c6-4ae2-9502-565f0796268e">
+
 
 After successfully running the app (Shiny_All_Contrasts.Rmd), you will get results like this:
 
