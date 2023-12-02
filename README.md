@@ -29,8 +29,10 @@ Here is an example of the sample dataset:
 
 After successfully running the app (Shiny_All_Contrasts.Rmd), you will get results like this:
 
-<img width="1719" alt="Screenshot 2023-09-29 at 3 35 17 PM" src="https://github.com/ZhiruiLi1/Limma_Voom_Shiny_CCV/assets/90368869/73721cc9-74db-4814-9e7f-630805c8b9c8">
+<img width="2550" alt="Screenshot 2023-12-02 at 4 33 32 AM" src="https://github.com/ZhiruiLi1/Limma_Voom_Shiny_CCV/assets/90368869/494c237a-e88a-43f7-9934-3b0d1a667e10">
+
 
 There is another version of the app (Shiny_Customize_Contrasts.Rmd) where you can upload all the valid contrasts as a Txt file:
 
-<img width="1717" alt="Screenshot 2023-09-29 at 3 36 43 PM" src="https://github.com/ZhiruiLi1/Limma_Voom_Shiny_CCV/assets/90368869/562fb5b5-94b1-4089-8542-e1930e31f94f">
+<img width="2553" alt="Screenshot 2023-12-02 at 4 35 27 AM" src="https://github.com/ZhiruiLi1/Limma_Voom_Shiny_CCV/assets/90368869/3bdfc197-00ed-4409-b02b-8a7c94a5606e">
+
