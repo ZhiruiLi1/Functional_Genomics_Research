@@ -17,6 +17,10 @@ library(ggplot2)
 library(shiny)
 library(sva)
 library(writexl)
+
+library(ComplexHeatmap) # BiocManager::install("ComplexHeatmap")
+library(RColorBrewer)
+library(dplyr)
 ```
 
 
@@ -55,6 +59,7 @@ ui <- fluidPage(
       ),
       mainPanel(
          plotOutput("volcanoPlot"),
+         plotOutput("heatmap"),
          verbatimTextOutput("printContrastMatrix"),
          verbatimTextOutput("printSignificantGenes")
       )      
@@ -250,6 +255,29 @@ server <- function(input, output) {
 
      return(volcano)
    })
+  
+  diff_exp_results <- reactive({
+    fit <- lmFit(v(), design())
+    fit2 <- contrasts.fit(fit, contrast_matrix())
+    fit2 <- eBayes(fit2)
+    result = topTable(fit2, n = Inf)
+    return(result)
+  })
+
+  top_genes_expression <- reactive({
+    result <- diff_exp_results()
+    top_genes <- head(result, 10)$genes
+
+    expr_matrix <- as.matrix(filtered_count_data()[-1])
+    expr_matrix_selected_genes <- expr_matrix[filtered_count_data()$genes %in% top_genes, ]
+    row.names(expr_matrix_selected_genes) <- top_genes
+    return(expr_matrix_selected_genes)
+  })
+
+  output$heatmap <- renderPlot({
+    expr_matrix <- top_genes_expression()
+    pheatmap(expr_matrix, main = "Top 10 Genes Heatmap", scale = "row", show_rownames = TRUE)
+    })
 }
 
 shinyApp(ui = ui, server = server)
