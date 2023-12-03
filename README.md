@@ -8,13 +8,13 @@ To use the app, fetch it from Docker Hub and type the given commands in your ter
 2. docker run -d --rm -p 3838:3838 lizhiruijerry/limma_voom_app_repo:limma_voom_app_complex
 3. Open a browser and go to http://localhost:3838
 
-Example datasets are included. When launching the app, please upload the counts_mat.txt file to the "Upload count data" section and the samplesheet.txt file to the "Upload sample data" section. You'll find additional example datasets in the "more_datasets" folder named sub_sample.txt and sub_count.txt.
+Example datasets are included. When launching the app, please upload the counts_mat.txt file to the "Upload count data" section and the samplesheet.txt file to the "Upload sample data" section. Additional example datasets in the "more_datasets" folder are named sub_sample.txt and sub_count.txt.
 
-Just so you know, while the app is running, you may encounter error warnings. However, the app is fully functional and may take some time to produce the output plot.
+While the app is running, you may encounter error warnings. However, the app is fully functional and may take some time to produce the output plot.
 
 To utilize the app effectively, please ensure the following:
 
-1. Both the counts matrix and the sample sheet datasets are in .txt format.
+1. The count matrix and the sample sheet datasets are in .txt format.
 2. The first column of the count dataset contains gene names.
 3. Subsequent columns of the count dataset represent samples.
 4. The first column of the sample dataset contains sample names.
