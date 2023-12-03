@@ -1,25 +1,26 @@
 This is a Shiny app that provides an interactive analysis of RNA-seq data. It uses Limma-Voom for differential expression analysis and produces a volcano plot highlighting significant DE genes.
 
-Given count and sample datasets, the app first conducts batch correction based on the 'Experiment' column in the sample dataset. After ensuring the data is free from batch effects, it applies the voom transformation to adjust the count data for linear modeling. Following this, a linear model is fitted using defined contrasts. The empirical Bayes (eBayes) method is then utilized to compute moderated statistics. Based on these results, the app identifies genes that are significantly differentially expressed.
+Given count and sample datasets, the app first conducts batch correction based on the 'Experiment' column in the sample dataset. After ensuring the data is free from batch effects, it applies the voom transformation to adjust the count data for linear modeling. Following this, a linear model is fitted using defined contrasts. The empirical Bayes (eBayes) method is then utilized to compute moderated statistics. Based on these results, the app identifies genes significantly differentially expressed.
 
 To use the app, fetch it from Docker Hub and type the given commands in your terminal:
 
 1. docker pull lizhiruijerry/limma_voom_app_repo:limma_voom_app_complex
-2. docker run -d --rm -p 3838:3838 lizhiruijerry/limma_voom_app_repo:limma_voom_app_complex 
-3. Open a browser and go to: http://localhost:3838
+2. docker run -d --rm -p 3838:3838 lizhiruijerry/limma_voom_app_repo:limma_voom_app_complex
+3. Open a browser and go to http://localhost:3838
 
-Example datasets are included. When launching the app, please upload the counts_mat.txt file to the "Upload count data" section and the samplesheet.txt file to the "Upload sample data" section. Inside the "more_datasets" folder, you'll find additional example datasets named sub_sample.txt and sub_count.txt.
+Example datasets are included. When launching the app, please upload the counts_mat.txt file to the "Upload count data" section and the samplesheet.txt file to the "Upload sample data" section. You'll find additional example datasets in the "more_datasets" folder named sub_sample.txt and sub_count.txt.
 
-Please note that while the app is running, you may encounter error warnings. However, rest assured that the app is fully functional and may take some time to produce the output plot.
+Just so you know, while the app is running, you may encounter error warnings. However, the app is fully functional and may take some time to produce the output plot.
 
 To utilize the app effectively, please ensure the following:
+
 1. Both the counts matrix and the sample sheet datasets are in .txt format.
 2. The first column of the count dataset contains gene names.
-3. Subsequent columns of the count dataset represent samples. 
+3. Subsequent columns of the count dataset represent samples.
 4. The first column of the sample dataset contains sample names.
 5. Each row in the first column of the sample dataset corresponds to the column names in the count dataset, starting from the second column.
 6. The second column of the sample dataset indicates the batch or experiment group to which the sample belongs.
-7. The sample dataset has three columns named "Treatment", "Condition", and "DaysPostInfection".
+7. The sample dataset has three columns named: "Treatment," "Condition," and "DaysPostInfection."
 
 Here is an example of the count dataset:
 <img width="966" alt="267563704-5ed3d30d-0c18-4b0b-afc0-e8f11373057f" src="https://github.com/ZhiruiLi1/Limma_Voom_Shiny_CCV/assets/90368869/93016b3a-f3b4-4958-b332-34efc114385e">
